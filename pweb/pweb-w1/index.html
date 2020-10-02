@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB - 1</title>
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+    
+        
+        ::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.7;
+            height: 100%;
+        }
+        .header {
+            min-height: 100vh;
+            background-image: url(img.jpg);
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            box-shadow:inset 0 0 0 2000px rgba(111, 111, 111, 0.517);
+        }
+        .italic-yellow{
+            font-style: italic;
+            color: #000000;
+            font-size: 40px;
+        }
+
+        .bold-blue{
+            font-style: bold;
+            font-weight: bold;
+            color: blue;
+            font-size: 70px;
+        }
+        .transition{
+            min-height: 40vh;
+            background-image: url(img-2.jpg);
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            box-shadow:inset 0 0 0 2000px rgba(29, 25, 238, 0.86);;
+        }
+        .transition-area{
+            width: 100vw;
+        }
+
+        .transition div div.panel-section2 {
+            height: 30vh;
+        }
+
+        .transition h3{
+            color: #F2CD5D;
+        }
+        .transition p{
+            color:rgba(255, 255, 255, 0.9);
+        }
+        .container-judul h1{
+            text-align: center;
+            margin-top: 20px;
+            color: #000000;
+        }
+        .container-judul p{
+        
+            text-align: center;
+            font-size: 15px;
+            color: #F2CD5D;
+            
+        }
+        .container-judul::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: #80A4ED;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .konten-biodata {
+            padding-top: 50px;
+        }
+
+        .konten-biodata ul{
+            list-style:none;
+            list-style-type:none;
+            padding-left: 40px;
+            overflow: hidden;
+        }
+        .konten-biodata ul li{
+
+            list-style:none;
+            position: relative;
+
+        }
+        .konten-biodata ul li :before{
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: -28px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 3px solid #80A4ED;
+        }
+        .konten-biodata ul li :after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: -24px;
+            width: 4px;
+            height: 173px;
+            background: #80A4ED;
+        }
+        .konten-biodata ul li h2 {
+            color: black;
+            font-style: bold;
+        }
+        .konten-biodata ul li h1 {
+            color: #0000C0;
+            text-indent: 25px;
+            font-size: 30px;
+        }
+        .konten-biodata ul li h1 a{
+            color: #0000C0;
+            
+            font-style: italic;
+        }
+        .konten-biodata .info{
+            margin-bottom: 100px;
+        }
+
+        .judul {
+            padding: 50px 0;
+            
+            background: #b63b24;
+            box-shadow:inset 0 0 0 2000px rgba(29, 25, 238, 0.86);;
+        }
+
+        .judul h1{
+            text-align: center;
+            margin-top: 20px;
+            color: #F2CD5D;
+        }
+        .judul p{
+        
+            text-align: center;
+            font-size: 15px;
+            color: #80A4ED;
+            
+        }
+        .judul::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: #47E5BC;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .konten-section{
+            padding-top: 50px;
+        }
+        .keporg ul{
+            list-style:none;
+            list-style-type:none;
+            padding-left: 40px;
+            overflow: hidden;
+        }
+        .keporg ul li{
+
+            list-style:none;
+            position: relative;
+
+        }
+
+        .keporg ul li :before{
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: -28px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 3px solid #80A4ED;
+        }
+        .keporg ul li :after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: -24px;
+            width: 4px;
+            height: 173px;
+            background: #80A4ED;
+        }
+        .keporg ul li h2 {
+            color: black;
+            font-style: bold;
+            font-size: ;
+        }
+        .keporg ul li h1 {
+            color: #0000C0;
+            text-indent: 25px;
+            font-size: 30px;
+        }
+        .keporg ul li h1 a{
+            color: #0000C0;
+            
+            font-style: italic;
+        }
+      
+
+
+    </style>
+    <!-- 47E5BC -->
+
+</head>
+<body>
+    
+
+    <!-- Introduction -->
+    <div class="header d-flex">
+        <div class="align-self-center">
+            <div class="col-md-6 col-xl-12 col-sm-6 mx-auto justify-content-center">
+                <h3 class="italic-yellow">Perkenalkan Saya </h2>
+                <h1 class="bold-blue">Abdur Rohman</h1>
+                <h5 class="italic-yellow">05111840000100</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Introduction -->
+    <!-- Transisi Identitas -->
+    <div class="transition">
+        <div class="row transition-area">
+            <div class="col-sm-12 d-flex panel-section2">
+                <div class="justify-content-center align-self-center mx-auto">
+                    <div class="container mx-auto text-center">
+                        <h3>Mahasiswa Informatika</h3>
+                        <p>
+                            di Institut Teknologi Sepuluh Nopember
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Transisi Identitas -->
+
+    <!-- ContainerBiodata -->
+    <div class="container biodata">
+        <!-- Judul -->
+        <div class="container-judul">
+            <h1>Biodata</h1>
+        </div>
+        <!-- Konten -->
+        <div class="konten-biodata" >
+            <!-- row -->
+            <div class="row"> 
+                <!-- col-md6 -->
+                <div class="col-md-6">
+                    <ul>
+                        <li>
+                            <div class="container info">
+                                <h2>Nama</h2>
+                                <h1>Abdur Rohman</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>TTL</h2>
+                                <h1>Jombang, 14 Oktober 2000</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Kewarganegaraan</h2>
+                                <h1>Indonesia</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Alamat/Kodepos</h2>
+                                <h1 >Jl.Sumberboto RT 3 RW 2/61475</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Agama</h2>
+                                <h1>Islam</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Jenis Kelamin</h2>
+                                <h1>Laki-Laki</h1>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- end col md6 -->
+                <!-- col md6 -->
+                <div class="col-md-6">
+    
+                    <ul>
+                        <li>
+                            <div class="container info">
+                                <h2>Nomor Telepon</h2>
+                                <h1>085730105094</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Email Resmi</h2>
+                                <h1>abdrohman0100@gmail.com</h1>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Email Personal</h2>
+                                <h1>abdurrohman9i03@gmail.com</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Instagram</h2>
+                                <h1><a href="https://www.instagram.com/a.rohman.ig">a.rohman.ig</a> </h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Github</h2>
+                                <h1><a href="https://github.com/abdurrohman100">abdurrohman100</a> </h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container info">
+                                <h2>Gitlab</h2>
+                                <h1><a href="https://gitlab.com/seijaku">seijaku</a> </h1>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- end col md6 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end konten biodata -->
+
+    </div>
+    <!-- end Container Biodata -->
+
+    <!-- pendidikan -->
+    <div class="pendidikan">
+        <div class="judul">
+            <h1>Pendidikan</h1>
+        </div>
+        <div class="konten-section container">
+            <div class="row mx-auto justify-content-center">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h3>2007-2012</h3>
+                        </div>
+                        <div class="col-sm-9">
+                            <h3>SDN Mojoduwur 2</h3>
+                            <p>Jombang</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h3>2012-2015</h3>
+                        </div>
+                        <div class="col-sm-9">
+                            <h3>SMP Negeri Mojagung</h3>
+                            <p>Jombang</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h3>2015-2018</h3>
+                        </div>
+                        <div class="col-sm-9">
+                            <h3>SMA Negeri Mojoagung</h3>
+                            <p>Jombang</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h3>2018-Sekarang</h3>
+                        </div>
+                        <div class="col-sm-9">
+                            <h3>S1 Informatika ITS</h3>
+                            <p> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Surabaya
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Pendidikan -->
+
+    <!-- Kepanitiaan -->
+    <div class="keporg">
+        <div class="judul">
+            <h1>Kepanitiaan dan Organisasi</h1>
+        </div>
+        <div class="konten-section container">
+            <div class="konten-section container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h3>2018-2019</h3>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Schematics 2019</h3>
+                                <p>
+                                    BPH 3 Schematics NLC
+                                    <ul>
+                                        <li>Koor Lapangan Penyisihan Surabaya</li>
+                                        <li>Crosscheck Konsumsi Penyisihan Daerah</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h3>2019</h3>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>Panitia Pemilihan Umum HMTC ITS</h3>
+                                <p>
+                                    <ul>
+                                        <li>Memastikan keberlangsungan pemilihan umum Ketua Himpunan HMTC ITS berjalan lancar</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h3>2019</h3>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>LKMM Pra-TD XII FTIK</h3>
+                                <p>
+                                    OC Perkamzin
+                                    <ul>
+                                        <li>Memastikan ketersediaan perlengkapan selama acara berlangsung</li>
+                                        <li>Memastikan keamanan area kegiatan</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h3>2019-Sekarang</h3>
+                            </div>
+                            <div class="col-sm-9">
+                                <h3>HMTC Membara 2020</h3>
+                                <p>
+                                    Staff Protek
+                                    <ul>
+                                        <li>PIC Komunitas TCyber</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Keporg -->
+
+    <div class="transition">
+        <div class="row transition-area">
+            <div class="col-sm-12 d-flex panel-section2">
+                <div class="justify-content-center align-self-center mx-auto">
+                    <div class="container mx-auto text-center">
+                        <h3>Terimakasih Telah Berkunjung</h3>
+                        <p>
+                            Institut Teknologi Sepuluh Nopember
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    
+</body>
+</html>
